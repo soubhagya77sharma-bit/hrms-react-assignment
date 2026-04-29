@@ -20,6 +20,9 @@ const PrintPdfDataGajiPegawai = () => {
     const year = searchParams.get("year");
     const [bulan, setBulan] = useState("");
     const [tahun, setTahun] = useState("");
+    const formatDate = (date = new Date()) => {
+    return new Date(date).toLocaleDateString("en-GB");
+};
 
     const { isError, user } = useSelector((state) => state.auth);
     const { nama_pegawai } = useSelector((state) => state.auth.user) || {};
@@ -214,7 +217,8 @@ const PrintPdfDataGajiPegawai = () => {
                                     <span>{nama_pegawai}</span>
                                 </div>
                                 <div className="font-medium text-black dark:text-white">
-                                    <span className="text-right">Karawang, {`${new Date().getDate()} ${bulan} ${tahun}`}</span>
+                                    <span className="text-right">Karawang, {formatDate()}</span>
+                                    {/* <span className="text-right">Karawang, {`${new Date().getDate()} ${bulan} ${tahun}`}</span> */}
                                     <br />
                                     <span>Finance</span>
                                     <br />
@@ -223,7 +227,8 @@ const PrintPdfDataGajiPegawai = () => {
                                 </div>
                             </div>
                             <div className="italic text-black dark:text-white mt-30">
-                                Dicetak Pada : {`${new Date().getDate()} ${bulan} ${tahun}`}
+                                {/* Dicetak Pada : {`${new Date().getDate()} ${bulan} ${tahun}`} */}
+                                Dicetak Pada : {formatDate()}
                             </div>
                         </div>
                     );
