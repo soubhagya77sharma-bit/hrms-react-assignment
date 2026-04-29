@@ -58,14 +58,17 @@ const DataGaji = () => {
 
     const handleBulanChange = (event) => {
         setFilterBulan(event.target.value);
+         setCurrentPage(1);
     };
 
     const handleTahunChange = (event) => {
         setFilterTahun(event.target.value);
+         setCurrentPage(1);
     };
 
     const handleNamaChange = (event) => {
         setFilterNama(event.target.value);
+        setCurrentPage(1);
     };
 
     const handleSearch = async (event) => {
