@@ -270,8 +270,10 @@ const DataGaji = () => {
                     </div>
                 </div>
 
-                <div className='max-w-full overflow-x-auto py-4'>
-                    <table className='w-full table-auto-full'>
+                {/* <div className='max-w-full overflow-x-auto py-4'> */}
+                    {/* <table className='w-full table-auto-full'> */}
+                    <div className="w-full overflow-x-auto pb-4">
+<table className="min-w-[1100px] w-full table-auto">
                         <thead>
                             <tr className='bg-gray-2  dark:bg-meta-4'>
                                 <th className='py-2 px-2 font-medium text-black dark:text-white'>
